@@ -12,13 +12,13 @@ Implementación de la clase TanqueGasolina
 class TanqueGasolina
 {
 private:
-    double capacidad;
+    int capacidad;
     double nivel;
 
 public:
     TanqueGasolina(); // constructor por default
-    void llenarTanque();
-    void gastarGasolina();
+    void cargarTanque(int);
+    void gastarGasolina(int);
 };
 
 #endif
