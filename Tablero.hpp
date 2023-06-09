@@ -24,10 +24,10 @@ private:
 
 public:
     Tablero();
-    void activar();
-    void desactivar();
-    void actualizarIndicadores();
-    void actualizarRecordatorioTanque();
+    void activar(bool);
+    void desactivar(bool);
+    void actualizarIndicadores(string);
+    void actualizarRecordatorioTanque(string);
 };
 
 #endif
