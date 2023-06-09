@@ -17,11 +17,11 @@ private:
 
 public:
     Automobil(); // constructor por default
-    void prender();
-    void apagar();
-    void acelerar();
-    void frenar();
-    void cargarGasolina();
+    void prender(bool);
+    void apagar(bool);
+    void acelerar(bool);
+    void frenar(bool);
+    void cargarGasolina(int);
 };
 
 #endif
