@@ -17,7 +17,7 @@ double presion;
 public:
 Llantas();
 void inflar(int);
-void desinflar();
+void desinflar(int);
 };
 
 #endif
