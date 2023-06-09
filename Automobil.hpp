@@ -7,7 +7,7 @@ Implementación de la clase Automobil
 */
 
 #ifndef AUTOMOBIL_HPP
-#define ATOMOBIL_HPP
+#define AUTOMOBIL_HPP
 
 class Automobil
 {
