@@ -16,10 +16,10 @@ using namespace std;
 class Llantas
 {
 private:
-    array<double, 4> presiones;
+    array<double, 4> presiones; //arreglo de tamaño 4 con tipo de dato double
 
 public:
-    Llantas();
+    Llantas(); //constructor por default
     double getPresion(int indice);
     void inflar(int indice, double presion);
     void desinflar(int indice, double presion);
