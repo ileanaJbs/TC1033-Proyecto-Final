@@ -12,13 +12,15 @@ Definición de la clase TanqueGasolina
 class TanqueGasolina
 {
 private:
-    int capacidad;
+    const double capacidad = 42.0;
     double nivel;
 
 public:
     TanqueGasolina(); // constructor por default
-    void cargarTanque(int);
-    void gastarGasolina(int);
+    void cargarTanque(double litros);
+    void gastarGasolina(double litros);
+    double getNivelGasolina();
+    double getPorcentajeNivel();
 };
 
 #endif
