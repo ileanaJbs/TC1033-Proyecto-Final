@@ -16,13 +16,14 @@ using namespace std;
 
 class Luces {
     private:
-        string lugar;
+        //string lugar;
         bool estadoLuces;
 
     public:
         Luces(); // constructor por default
         void apagarLuces(bool);
         void prenderLuces(bool);
+        bool getEstadoLuces();
 
 };
 
