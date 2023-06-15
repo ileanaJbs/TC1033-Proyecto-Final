@@ -9,15 +9,20 @@ Definición de la clase Llantas
 #ifndef LLANTAS_HPP
 #define LLANTAS_HPP
 
-class Llantas 
+#include <array>
+
+using namespace std;
+
+class Llantas
 {
 private:
-double presion;
+    array<double, 4> presiones;
 
 public:
-Llantas();
-void inflar(int);
-void desinflar(int);
+    Llantas();
+    double getPresion(int indice);
+    void inflar(int indice, double presion);
+    void desinflar(int indice, double presion);
 };
 
 #endif
