@@ -2,7 +2,7 @@
 Autor: Jocelyn Ileana Balderas Sánchez
 Matrícula: A01798528
 
-Implementación de la clase Tablero
+Definición de la clase Tablero
 */
 
 #include <iostream>
