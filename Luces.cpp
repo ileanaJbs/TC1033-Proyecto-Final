@@ -13,11 +13,13 @@ Luces::Luces()
     estadoLuces = false;
 }
 
+//checar si es true o false
 void Luces::prenderLuces()
 {
     estadoLuces = true;
 }
 
+//checar si es true o false
 void Luces::apagarLuces()
 {
     estadoLuces = true;
