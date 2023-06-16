@@ -22,7 +22,6 @@ using namespace std;
 void menuPrincipal()
 {
     cout << "----- MENU -----" << endl;
-    cout << "Bienvenido!" << endl;
     cout << "Selecciona la opcion deseada: " << endl;
     cout << "1) Prender/Apagar el auto" << endl;
     cout << "2) Acelerar" << endl;
@@ -92,12 +91,12 @@ int main()
             break;
         case 10:
             cout << "Adios! Vuelve pronto" << endl;
-            exit(0);
+            break;
         default:
             cout << "Opcion invalida. Ingresa un numero del 1 al 10" << endl;
             break;
         }
         cout << endl;
-    }while (x = !10);
+    }while (x != 10);
     return 0;
 }
