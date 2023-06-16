@@ -6,6 +6,11 @@ Definición de la clase Automobil
 
 */
 
+#include "Llantas.hpp"
+#include "Luces.hpp"
+#include "Tablero.hpp"
+#include "TanqueGasolina.hpp"
+
 #ifndef AUTOMOBIL_HPP
 #define AUTOMOBIL_HPP
 
@@ -14,6 +19,12 @@ class Automobil
 private:
     double velocidadActual;
     bool estado;
+
+    //declarando la composición
+    Luces luces;
+    Llantas llantas;
+    Tablero tablero;
+    TanqueGasolina tanqueGasolina;
 
 public:
     Automobil(); // constructor por default
