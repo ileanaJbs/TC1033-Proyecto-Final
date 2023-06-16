@@ -22,7 +22,8 @@ void Luces::prenderLuces()
 //checar si es true o false
 void Luces::apagarLuces()
 {
-    estadoLuces = true;
+    // original: estadoLuces = true;
+    estadoLuces = false;
 }
 
 bool Luces::getEstadoLuces()
