@@ -23,11 +23,11 @@ void Automobil::prenderApagar()
     estado = !estado;
     if (estado)
     {
-        tablero.mostrarMensaje("El automovil se ha encendido");
+        tablero.mostrarMensaje("El automobil se ha encendido");
     }
     else
     {
-        tablero.mostrarMensaje("El automovil se ha apagado");
+        tablero.mostrarMensaje("El automobil se ha apagado");
     }
 }
 
@@ -55,7 +55,7 @@ void Automobil::acelerar()
     }
     else
     {
-        tablero.mostrarMensaje("El automovil esta apagado. No se puede acelerar");
+        tablero.mostrarMensaje("El automobil esta apagado. No se puede acelerar");
     }
 }
 
@@ -72,7 +72,7 @@ void Automobil::frenar()
     }
     else
     {
-        tablero.mostrarMensaje("El automovil esta apagado. No se puede frenar");
+        tablero.mostrarMensaje("El automobil esta apagado. No se puede frenar");
     }
 }
 
@@ -81,17 +81,26 @@ void Automobil::prenderLuces()
     if (estado)
     {
         luces.prenderLuces();
-        tablero.mostrarMensaje("Las luces del automovil han sido encendidas");
+        tablero.mostrarMensaje("Las luces del automobil han sido encendidas");
     }
     else
     {
-        tablero.mostrarMensaje("El automovil esta apagado. No se pueden encender las luces");
+        tablero.mostrarMensaje("El automobil esta apagado. No se pueden encender las luces");
     }
 }
 
 void Automobil::apagarLuces()
 {
-
+    luces.apagarLuces();
+    if (estado)
+    {
+        luces.prenderLuces();
+        tablero.mostrarMensaje("Las luces del automobil han sido apagadas");
+    }
+    else
+    {
+        tablero.mostrarMensaje("El automobil esta apagado. No se pueden apagar las luces porque ya se encuentran apagadas");
+    }
 }
 
 void Automobil::cargarGasolina(double litros)
