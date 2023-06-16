@@ -47,53 +47,57 @@ int main()
 
     automobil.mostrarTablero();
 
-    menuPrincipal();
-    cin >> x;
-
-    switch (x)
+    do
     {
-    case 1:
-        automobil.prenderApagar();
-        break;
-    case 2: 
-        automobil.acelerar();
-        break;
-    case 3:
-        automobil.frenar();
-        break;
-    case 4:
-        automobil.prenderLuces();
-        break;
-    case 5:
-        automobil.apagarLuces();
-        break;
-    case 6:
-        cout << "Ingrese la cantidad de litros a cargar" << endl;
-        cin >> litros;
-        automobil.cargarGasolina(litros);
-        break;
-    case 7:
-        cout << "Escribe el numero de llanta que deseas inflar: " << endl;
-        cin >> llanta;
-        cout << "Escribe cuantos psi de presion se inflara la llanta: " << endl;
-        cin >> presion;
-        automobil.inflarLlanta(llanta -1, presion);
-        break;
-    case 8:
-        cout << "Escribe el numero de llanta que deseas desinflar: " << endl;
-        cin >> llanta;
-        cout << "Escribe cuantos psi de presion se desinflara la llanta: " << endl;
-        automobil.desinflarLlanta(llanta -1, presion);
-        break;
-    case 9:
-        automobil.mostrarTablero();
-        break;
-    case 10:
-        cout <<"Adios! Vuelve pronto" << endl;
-        exit(0);
-    default:
-        cout << "Opcion invalida. Ingresa un numero del 1 al 10" << endl;
-        break;
-    }
+        menuPrincipal();
+        cin >> x;
+
+        switch (x)
+        {
+        case 1:
+            automobil.prenderApagar();
+            break;
+        case 2:
+            automobil.acelerar();
+            break;
+        case 3:
+            automobil.frenar();
+            break;
+        case 4:
+            automobil.prenderLuces();
+            break;
+        case 5:
+            automobil.apagarLuces();
+            break;
+        case 6:
+            cout << "Ingrese la cantidad de litros a cargar" << endl;
+            cin >> litros;
+            automobil.cargarGasolina(litros);
+            break;
+        case 7:
+            cout << "Escribe el numero de llanta que deseas inflar: " << endl;
+            cin >> llanta;
+            cout << "Escribe cuantos psi de presion se inflara la llanta: " << endl;
+            cin >> presion;
+            automobil.inflarLlanta(llanta - 1, presion);
+            break;
+        case 8:
+            cout << "Escribe el numero de llanta que deseas desinflar: " << endl;
+            cin >> llanta;
+            cout << "Escribe cuantos psi de presion se desinflara la llanta: " << endl;
+            automobil.desinflarLlanta(llanta - 1, presion);
+            break;
+        case 9:
+            automobil.mostrarTablero();
+            break;
+        case 10:
+            cout << "Adios! Vuelve pronto" << endl;
+            exit(0);
+        default:
+            cout << "Opcion invalida. Ingresa un numero del 1 al 10" << endl;
+            break;
+        }
+        cout << endl;
+    }while (x = !10);
     return 0;
 }

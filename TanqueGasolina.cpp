@@ -13,13 +13,12 @@ TanqueGasolina::TanqueGasolina()
     nivel = capacidad;
 }
 
-/*double TanqueGasolina::getNivelGasolina()
+double TanqueGasolina::getNivelGasolina()
 {
     return nivel;
 }
-*/
 
-double TanqueGasolina::getNivelGasolina()
+double TanqueGasolina::getPorcentajeNivel()
 {
     return nivel / capacidad;
 }
