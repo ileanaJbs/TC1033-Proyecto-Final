@@ -78,7 +78,15 @@ void Automobil::frenar()
 
 void Automobil::prenderLuces() 
 {
-
+    if (estado)
+    {
+        luces.prenderLuces();
+        tablero.mostrarMensaje("Las luces del automovil han sido encendidas");
+    }
+    else
+    {
+        tablero.mostrarMensaje("El automovil esta apagado. No se pueden encender las luces");
+    }
 }
 
 void Automobil::apagarLuces()
@@ -103,5 +111,5 @@ void Automobil::inflarLlanta(int indice, double presion)
 
 void Automobil::desinflarLlanta(int indice, double presion)
 {
-    
+
 }

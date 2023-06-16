@@ -21,8 +21,8 @@ class Luces {
 
     public:
         Luces(); // constructor por default
-        void apagarLuces(bool);
-        void prenderLuces(bool);
+        void apagarLuces();
+        void prenderLuces();
         bool getEstadoLuces();
 
 };
