@@ -105,20 +105,73 @@ void Automobil::apagarLuces()
 
 void Automobil::cargarGasolina(double litros)
 {
-
+    if (litros > 0)
+    {
+        if (tanqueGasolina.getNivelGasolina() + litros <= 42.0)
+        {
+            tanqueGasolina.gastarGasolina(litros);
+            tablero.mostrarMensaje("Se han cargado " + to_string(litros) + " litros de gasolina");
+        }
+        else
+        {
+            tablero.mostrarMensaje("No se puede cargar esa cantidad de gasolina. El tanque esta en su capacidad maxima");
+        }
+    }
+    else
+    {
+        tablero.mostrarMensaje("No se puede cargar una cantidad igual o menor a cero de litros de gasolina");
+    }
 }
 
 void Automobil::mostrarTablero()
 {
+    array<double, 4> presionesLlantas;
+    presionesLlantas[0] = llantas.getPresion(0);
+    presionesLlantas[1] = llantas.getPresion(1);
+    presionesLlantas[2] = llantas.getPresion(2);
+    presionesLlantas[3] = llantas.getPresion(3);
 
+    tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
 }
 
 void Automobil::inflarLlanta(int indice, double presion)
 {
+    double presionActual = llantas.getPresion(indice);
+    if (presionActual == 33.0 && presion > 0)
+    {
+        llantas.inflar(indice, presion);
+        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido inflada " + to_string(presion) + " psi");
+        array<double, 4> presionesLlantas;
+        presionesLlantas[0] = llantas.getPresion(0);
+        presionesLlantas[1] = llantas.getPresion(1);
+        presionesLlantas[2] = llantas.getPresion(2);
+        presionesLlantas[3] = llantas.getPresion(3);
 
+        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
+    }
+    else
+    {
+        tablero.mostrarMensaje("No se puede inflar la llanta " + to_string(indice + 1) + " con una cantidad igual o menor a cero psi");
+    }
 }
 
 void Automobil::desinflarLlanta(int indice, double presion)
 {
+    double presionActual = llantas.getPresion(indice);
+    if (presionActual == 33.0 && presion > 0)
+    {
+        llantas.desinflar(indice, presion);
+        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido desinflada " + to_string(presion) + " psi");
+        array<double, 4> presionesLlantas;
+        presionesLlantas[0] = llantas.getPresion(0);
+        presionesLlantas[1] = llantas.getPresion(1);
+        presionesLlantas[2] = llantas.getPresion(2);
+        presionesLlantas[3] = llantas.getPresion(3);
 
+        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
+    }
+    else
+    {
+        tablero.mostrarMensaje("No se puede desinflar la llanta " + to_string(indice + 1) + " con una cantidad igual o menor a cero psi");
+    }
 }
