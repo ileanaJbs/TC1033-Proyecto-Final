@@ -7,6 +7,7 @@ Definición de la clase Tablero
 
 #include <iostream>
 #include <string>
+#include <array>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ using namespace std;
 
 class Tablero
 {
-private:
+/*private:
     double indicadorNivelTanqueGasolina;
     string indicadorLuces;
     double indicadorVelocidadActual;
@@ -28,6 +29,10 @@ public:
     void desactivar(bool);
     void actualizarIndicadores(string);
     void actualizarRecordatorioTanque(string);
+    */
+public:
+    void mostrarEstado(bool encendido, int velocidad, double nivelGasolina, bool lucesEncendidas, array<double, 4>& presionesLlantas);
+    void mostrarMensaje(const string& mensaje);
 };
 
 #endif
