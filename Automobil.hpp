@@ -28,11 +28,15 @@ private:
 
 public:
     Automobil(); // constructor por default
-    void prender(bool);
-    void apagar(bool);
-    void acelerar(bool);
-    void frenar(bool);
-    void cargarGasolina(int);
+    void prenderApagar();
+    void acelerar();
+    void frenar();
+    void prenderLuces();
+    void apagarLuces();
+    void cargarGasolina(double litros);
+    void mostrarTablero();
+    void inflarLlanta(int indice, double presion);
+    void desinflarLlanta(int indice, double presion);
 };
 
 #endif
