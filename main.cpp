@@ -74,32 +74,38 @@ int main()
             automobil.cargarGasolina(litros);
             break;
         case 7:
-            cout << "Escribe el numero de llanta que deseas inflar: " << endl;
-            cin >> llanta;
-            cout << "Escribe cuantos psi de presion se inflara la llanta: " << endl;
-            cin >> presion;
-            if (llanta >= 1 && llanta <= 4)
+            do
             {
-                automobil.inflarLlanta(llanta - 1, presion + 33.0);
-            }
-            else
-            {
-                cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
-            }
+                cout << "Escribe el numero de llanta que deseas inflar (1-4): " << endl;
+                cin >> llanta;
+                if (llanta >= 1 && llanta <= 4)
+                {
+                    cout << "Escribe cuantos psi de presion se inflara la llanta: " << endl;
+                    cin >> presion;
+                    automobil.inflarLlanta(llanta - 1, presion + 33.0);
+                }
+                else
+                {
+                    cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
+                }
+            } while (llanta < 1 || llanta > 4);
             break;
         case 8:
-            cout << "Escribe el numero de llanta que deseas desinflar: " << endl;
-            cin >> llanta;
-            cout << "Escribe cuantos psi de presion se desinflara la llanta: " << endl;
-            cin >> presion;
-            if (llanta >= 1 && llanta <= 4)
+            do
             {
-                automobil.desinflarLlanta(llanta - 1, -presion + 33.0);
-            }
-            else
-            {
-                cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
-            }
+                cout << "Escribe el numero de llanta que deseas desinflar (1-4): " << endl;
+                cin >> llanta;
+                if (llanta >= 1 && llanta <= 4)
+                {
+                    cout << "Escribe cuantos psi de presion se desinflara la llanta: " << endl;
+                    cin >> presion;
+                    automobil.desinflarLlanta(llanta - 1, -presion + 33.0);
+                }
+                else
+                {
+                    cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
+                }
+            } while (llanta < 1 || llanta > 4);
             break;
         case 9:
             automobil.mostrarTablero();
@@ -112,6 +118,6 @@ int main()
             break;
         }
         cout << endl;
-    }while (x != 10);
+    } while (x != 10);
     return 0;
 }
