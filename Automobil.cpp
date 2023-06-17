@@ -140,7 +140,7 @@ void Automobil::inflarLlanta(int indice, double presion)
     if (presionActual == 33.0 && presion > 0)
     {
         llantas.inflar(indice, presion);
-        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido inflada " + to_string(presion) + " psi");
+        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido inflada a" + to_string(presion) + " psi");
         array<double, 4> presionesLlantas;
         presionesLlantas[0] = llantas.getPresion(0);
         presionesLlantas[1] = llantas.getPresion(1);
@@ -161,7 +161,7 @@ void Automobil::desinflarLlanta(int indice, double presion)
     if (presionActual == 33.0 && presion > 0)
     {
         llantas.desinflar(indice, presion);
-        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido desinflada " + to_string(presion) + " psi");
+        tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido desinflada a" + to_string(presion) + " psi");
         array<double, 4> presionesLlantas;
         presionesLlantas[0] = llantas.getPresion(0);
         presionesLlantas[1] = llantas.getPresion(1);
