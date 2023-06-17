@@ -14,7 +14,15 @@ void Tablero::mostrarEstado(bool encendido, int velocidad, double nivelGasolina,
     cout << "\n---------------- TABLERO ----------------" << endl;
     cout << "\nEstado del automobil: " << (encendido ? "Encendido" : "Apagado") << endl;
     cout << "Velocidad: " << velocidad << " km/h" << endl;
+    if (velocidad > 160)
+    {
+        cout << "(Peligro!)" << endl;
+    }
     cout << "Nivel de gasolina: " << nivelGasolina << " litros (" << (nivelGasolina / 42.0) * 100.0 << "%)" << endl;
+    if (((nivelGasolina / 42.0) * 100.0) <= 15)
+    {
+        cout << "(Recordatorio! Llenar el tanque de gasolina)" << endl;
+    }
     cout << "Luces: " << (lucesEncendidas ? "Encendidas" : "Apagadas") << endl;
 
     cout << "Estado de las llantas: " << endl;
@@ -28,7 +36,7 @@ void Tablero::mostrarEstado(bool encendido, int velocidad, double nivelGasolina,
         */
         if (presionesLlantas[i] > 39.6 || presionesLlantas[i] < 26.4)
         {
-            cout << " (¡Peligro!)" << endl;
+            cout << " (Peligro!)" << endl;
         }
         cout << "  ";
     }
