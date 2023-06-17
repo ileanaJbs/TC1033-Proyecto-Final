@@ -33,7 +33,7 @@ void menuPrincipal()
     cout << "8) Desinflar llanta" << endl;
     cout << "9) Mostrar tablero" << endl;
     cout << "10) Salir" << endl;
-    cout << "--------------------------" << endl;
+    cout << "----------------------------------------" << endl;
 }
 
 int main()
