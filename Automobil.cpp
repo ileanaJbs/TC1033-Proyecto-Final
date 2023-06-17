@@ -114,7 +114,7 @@ void Automobil::cargarGasolina(double litros)
         }
         else
         {
-            tablero.mostrarMensaje("No se puede cargar esa cantidad de gasolina. El tanque esta en su capacidad maxima");
+            tablero.mostrarMensaje("No se puede cargar esa cantidad de gasolina porque excede la capacidad maxima del tanque");
         }
     }
     else

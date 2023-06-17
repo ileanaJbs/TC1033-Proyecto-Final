@@ -11,8 +11,8 @@ Implementación de la clase Tablero
 
 void Tablero::mostrarEstado(bool encendido, int velocidad, double nivelGasolina, bool lucesEncendidas, array<double, 4> &presionesLlantas)
 {
-    cout << "----- TABLERO -----" << endl;
-    cout << "Estado del automovil: " << (encendido ? "Encendido" : "Apagado") << endl;
+    cout << "\n---------------- TABLERO ----------------" << endl;
+    cout << "Estado del automobil: " << (encendido ? "Encendido" : "Apagado") << endl;
     cout << "Velocidad: " << velocidad << " km/h" << endl;
     cout << "Nivel de gasolina: " << nivelGasolina << " litros (" << (nivelGasolina / 42.0) * 100.0 << "%)" << endl;
     cout << "Luces: " << (lucesEncendidas ? "Encendidas" : "Apagadas") << endl;
