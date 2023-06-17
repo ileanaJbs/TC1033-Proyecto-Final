@@ -21,7 +21,7 @@ using namespace std;
 
 void menuPrincipal()
 {
-    cout << "----- MENU -----" << endl;
+    cout << "\n---------------- MENU ----------------" << endl;
     cout << "Selecciona la opcion deseada: " << endl;
     cout << "1) Prender/Apagar el auto" << endl;
     cout << "2) Acelerar" << endl;
