@@ -69,14 +69,14 @@ int main()
             automobil.apagarLuces();
             break;
         case 6:
-            cout << "Ingrese la cantidad de litros a cargar" << endl;
+            cout << "Ingrese la cantidad de litros a cargar: " << endl;
             cin >> litros;
             automobil.cargarGasolina(litros);
             break;
         case 7:
             do
             {
-                cout << "Escribe el numero de llanta que deseas inflar (1-4): " << endl;
+                cout << "Escribe el numero de llanta que deseas inflar: " << endl;
                 cin >> llanta;
                 if (llanta >= 1 && llanta <= 4)
                 {
@@ -93,7 +93,7 @@ int main()
         case 8:
             do
             {
-                cout << "Escribe el numero de llanta que deseas desinflar (1-4): " << endl;
+                cout << "Escribe el numero de llanta que deseas desinflar: " << endl;
                 cin >> llanta;
                 if (llanta >= 1 && llanta <= 4)
                 {
