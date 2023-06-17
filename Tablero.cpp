@@ -5,8 +5,9 @@ Matrícula: A01798528
 Implementación de la clase Tablero
 */
 
-#include "Llantas.hpp"
+#include "Llanta.hpp"
 #include "Tablero.hpp"
+#include "Luz.hpp"
 #include <iostream>
 
 void Tablero::mostrarEstado(bool encendido, int velocidad, double nivelGasolina, bool lucesEncendidas, array<double, 4> &presionesLlantas)

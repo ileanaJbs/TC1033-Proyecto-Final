@@ -11,16 +11,16 @@ Definición de la clase Luces
 
 using namespace std;
 
-#ifndef LUCES_HPP
-#define LUCES_HPP
+#ifndef LUZ_HPP
+#define LUZ_HPP
 
-class Luces {
+class Luz {
     private:
         //string lugar;
         bool estadoLuces;
 
     public:
-        Luces(); // constructor por default
+        Luz(); // constructor por default
         void apagarLuces();
         void prenderLuces();
         bool getEstadoLuces();

@@ -6,27 +6,27 @@ Implementación de la clase Luces
 
 */
 
-#include "Luces.hpp"
+#include "Luz.hpp"
 
-Luces::Luces()
+Luz::Luz()
 {
     estadoLuces = false;
 }
 
 //checar si es true o false
-void Luces::prenderLuces()
+void Luz::prenderLuces()
 {
     estadoLuces = true;
 }
 
 //checar si es true o false
-void Luces::apagarLuces()
+void Luz::apagarLuces()
 {
     // original: estadoLuces = true;
     estadoLuces = false;
 }
 
-bool Luces::getEstadoLuces()
+bool Luz::getEstadoLuces()
 {
     return estadoLuces;
 }

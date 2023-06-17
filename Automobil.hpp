@@ -6,8 +6,8 @@ Definición de la clase Automobil
 
 */
 
-#include "Llantas.hpp"
-#include "Luces.hpp"
+#include "Llanta.hpp"
+#include "Luz.hpp"
 #include "Tablero.hpp"
 #include "TanqueGasolina.hpp"
 
@@ -21,8 +21,8 @@ private:
     bool estado;
 
     //declarando la composición
-    Luces luces;
-    Llantas llantas;
+    Luz luz;
+    Llanta llanta;
     Tablero tablero;
     TanqueGasolina tanqueGasolina;
 
@@ -38,5 +38,4 @@ public:
     void inflarLlanta(int indice, double presion);
     void desinflarLlanta(int indice, double presion);
 };
-
 #endif

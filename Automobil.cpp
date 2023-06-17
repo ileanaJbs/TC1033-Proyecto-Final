@@ -81,7 +81,7 @@ void Automobil::prenderLuces()
 {
     if (estado)
     {
-        luces.prenderLuces();
+        luz.prenderLuces();
         tablero.mostrarMensaje("Las luces del automobil han sido encendidas");
     }
     else
@@ -92,10 +92,10 @@ void Automobil::prenderLuces()
 
 void Automobil::apagarLuces()
 {
-    luces.apagarLuces();
+    luz.apagarLuces();
     if (estado)
     {
-        luces.prenderLuces();
+        luz.prenderLuces();
         tablero.mostrarMensaje("Las luces del automobil han sido apagadas");
     }
     else
@@ -127,28 +127,28 @@ void Automobil::cargarGasolina(double litros)
 void Automobil::mostrarTablero()
 {
     array<double, 4> presionesLlantas;
-    presionesLlantas[0] = llantas.getPresion(0);
-    presionesLlantas[1] = llantas.getPresion(1);
-    presionesLlantas[2] = llantas.getPresion(2);
-    presionesLlantas[3] = llantas.getPresion(3);
+    presionesLlantas[0] = llanta.getPresion(0);
+    presionesLlantas[1] = llanta.getPresion(1);
+    presionesLlantas[2] = llanta.getPresion(2);
+    presionesLlantas[3] = llanta.getPresion(3);
 
-    tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
+    tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luz.getEstadoLuces(), presionesLlantas);
 }
 
 void Automobil::inflarLlanta(int indice, double presion)
 {
-    double presionActual = llantas.getPresion(indice);
+    double presionActual = llanta.getPresion(indice);
     if (presionActual >0 && presion > 0)
     {
-        llantas.inflar(indice, presion);
+        llanta.inflar(indice, presion);
         tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido inflada a " + to_string(presion) + " psi");
         array<double, 4> presionesLlantas;
-        presionesLlantas[0] = llantas.getPresion(0);
-        presionesLlantas[1] = llantas.getPresion(1);
-        presionesLlantas[2] = llantas.getPresion(2);
-        presionesLlantas[3] = llantas.getPresion(3);
+        presionesLlantas[0] = llanta.getPresion(0);
+        presionesLlantas[1] = llanta.getPresion(1);
+        presionesLlantas[2] = llanta.getPresion(2);
+        presionesLlantas[3] = llanta.getPresion(3);
 
-        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
+        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luz.getEstadoLuces(), presionesLlantas);
     }
     else
     {
@@ -158,18 +158,18 @@ void Automobil::inflarLlanta(int indice, double presion)
 
 void Automobil::desinflarLlanta(int indice, double presion)
 {
-    double presionActual = llantas.getPresion(indice);
+    double presionActual = llanta.getPresion(indice);
     if (presionActual >0 && presion > 0)
     {
-        llantas.desinflar(indice, presion);
+        llanta.desinflar(indice, presion);
         tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido desinflada a " + to_string(presion) + " psi");
         array<double, 4> presionesLlantas;
-        presionesLlantas[0] = llantas.getPresion(0);
-        presionesLlantas[1] = llantas.getPresion(1);
-        presionesLlantas[2] = llantas.getPresion(2);
-        presionesLlantas[3] = llantas.getPresion(3);
+        presionesLlantas[0] = llanta.getPresion(0);
+        presionesLlantas[1] = llanta.getPresion(1);
+        presionesLlantas[2] = llanta.getPresion(2);
+        presionesLlantas[3] = llanta.getPresion(3);
 
-        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luces.getEstadoLuces(), presionesLlantas);
+        tablero.mostrarEstado(estado, velocidadActual, tanqueGasolina.getNivelGasolina(), luz.getEstadoLuces(), presionesLlantas);
     }
     else
     {
