@@ -46,12 +46,12 @@ void Automobil::acelerar()
 
         if (velocidadActual > 160)
         {
-            tablero.mostrarMensaje("Warning");
+            tablero.mostrarMensaje("Warning Velocidad");
         }
 
         if (tanqueGasolina.getPorcentajeNivel() < 0.15)
         {
-            tablero.mostrarMensaje("Reminder");
+            tablero.mostrarMensaje("Reminder Tanque Gasolina");
         }
     }
     else
@@ -138,7 +138,7 @@ void Automobil::mostrarTablero()
 void Automobil::inflarLlanta(int indice, double presion)
 {
     double presionActual = llantas.getPresion(indice);
-    if (presionActual == 33.0 && presion > 0)
+    if (presionActual >0 && presion > 0)
     {
         llantas.inflar(indice, presion);
         tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido inflada a " + to_string(presion) + " psi");
@@ -159,7 +159,7 @@ void Automobil::inflarLlanta(int indice, double presion)
 void Automobil::desinflarLlanta(int indice, double presion)
 {
     double presionActual = llantas.getPresion(indice);
-    if (presionActual == 33.0 && presion > 0)
+    if (presionActual >0 && presion > 0)
     {
         llantas.desinflar(indice, presion);
         tablero.mostrarMensaje("La llanta " + to_string(indice + 1) + " ha sido desinflada a " + to_string(presion) + " psi");
