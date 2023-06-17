@@ -109,7 +109,7 @@ void Automobil::cargarGasolina(double litros)
     {
         if (tanqueGasolina.getNivelGasolina() + litros <= 42.0)
         {
-            tanqueGasolina.gastarGasolina(litros);
+            tanqueGasolina.cargarTanque(litros);
             tablero.mostrarMensaje("Se han cargado " + to_string(litros) + " litros de gasolina");
         }
         else
