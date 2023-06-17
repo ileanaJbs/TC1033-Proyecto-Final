@@ -44,8 +44,6 @@ int main()
     int llanta;
     double presion;
 
-    automobil.mostrarTablero();
-
     do
     {
         menuPrincipal();
@@ -55,23 +53,29 @@ int main()
         {
         case 1:
             automobil.prenderApagar();
+            automobil.mostrarTablero();
             break;
         case 2:
             automobil.acelerar();
+            automobil.mostrarTablero();
             break;
         case 3:
             automobil.frenar();
+            automobil.mostrarTablero();
             break;
         case 4:
             automobil.prenderLuces();
+            automobil.mostrarTablero();
             break;
         case 5:
             automobil.apagarLuces();
+            automobil.mostrarTablero();
             break;
         case 6:
             cout << "Ingrese la cantidad de litros a cargar: " << endl;
             cin >> litros;
             automobil.cargarGasolina(litros);
+            automobil.mostrarTablero();
             break;
         case 7:
             do
