@@ -85,7 +85,7 @@ int main()
             cin >> llanta;
             cout << "Escribe cuantos psi de presion se desinflara la llanta: " << endl;
             cin >> presion;
-            automobil.desinflarLlanta(llanta - 1, presion - 33.00);
+            automobil.desinflarLlanta(llanta - 1, -presion + 33.00);
             break;
         case 9:
             automobil.mostrarTablero();
