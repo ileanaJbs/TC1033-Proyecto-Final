@@ -41,16 +41,17 @@ void Automobil::acelerar()
         if (velocidadActual > 230)
         {
             velocidadActual = 230;
+            cout << "La velocidad maxima permitida es 230 km/h" << endl;
         }
 
         if (velocidadActual > 160)
         {
-            tablero.mostrarMensaje("¡Peligro! Velocidad alta");
+            tablero.mostrarMensaje("Warning");
         }
 
         if (tanqueGasolina.getPorcentajeNivel() < 0.15)
         {
-            tablero.mostrarMensaje("¡Recordatorio! Llenar el tanque de gasolina");
+            tablero.mostrarMensaje("Reminder");
         }
     }
     else
