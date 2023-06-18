@@ -44,6 +44,10 @@ int main()
     int llanta;
     double presion;
 
+    cout << "\nAutor: Jocelyn Ileana Balderas Sanchez" << endl;
+    cout << "Matricula: A01798528" << endl;
+    cout << "Carrera: ITD" << endl;
+
     do
     {
         menuPrincipal();
