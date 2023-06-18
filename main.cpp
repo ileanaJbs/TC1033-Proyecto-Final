@@ -96,7 +96,7 @@ int main()
                 {
                     cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
                 }
-            } while (llanta < 1 || llanta > 4);
+            } while (llanta < 1 && llanta > 4);
             break;
         case 8:
             do
@@ -113,7 +113,7 @@ int main()
                 {
                     cout << "Numero de llanta invalido. Ingresa un numero del 1 al 4" << endl;
                 }
-            } while (llanta < 1 || llanta > 4);
+            } while (llanta < 1 && llanta > 4);
             break;
         case 9:
             automobil.mostrarTablero();
