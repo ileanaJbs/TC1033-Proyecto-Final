@@ -22,15 +22,9 @@ class Tablero
     double indicadorVelocidadActual;
     string indicadorPeligroVelocidad;
     string recordatorioTanque;
-
+*/
 public:
     Tablero();
-    void activar(bool);
-    void desactivar(bool);
-    void actualizarIndicadores(string);
-    void actualizarRecordatorioTanque(string);
-    */
-public:
     void mostrarEstado(bool encendido, int velocidad, double nivelGasolina, bool lucesEncendidas, array<double, 4>& presionesLlantas);
     void mostrarMensaje(const string& mensaje);
 };

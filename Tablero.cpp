@@ -10,6 +10,10 @@ Implementación de la clase Tablero
 #include "Luz.hpp"
 #include <iostream>
 
+Tablero::Tablero()
+{
+}
+
 void Tablero::mostrarEstado(bool encendido, int velocidad, double nivelGasolina, bool lucesEncendidas, array<double, 4> &presionesLlantas)
 {
     cout << "\n---------------- TABLERO ----------------" << endl;
